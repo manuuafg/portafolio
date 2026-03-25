@@ -1,4 +1,11 @@
-name: Deploy to GitHub Pages
+ Check failure on line 1 in .github/workflows/deploy.yml
+
+
+GitHub Actions
+/ .github/workflows/deploy.yml
+Invalid workflow file
+
+(Line: 20, Col: 14): Unexpected value ''
 
 on:
   push:
