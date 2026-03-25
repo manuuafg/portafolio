@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="Manuel Ferraz | Desarrollador Full Stack">
+    <header class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="/portafolio/mi-foto.jpg" alt="Manuel Ferraz" class="profile-pic" />
+            </div>
+            
+            <div class="hero-text">
+                <h1>Hola, soy <span class="highlight">Manuel Ferraz</span></h1>
+                <p class="role">Desarrollador Full Stack | TSU en Informática</p>
+                <p class="bio">
+                    Egresado del <strong>IUJO</strong>. Especialista en optimizar procesos críticos en empresas reales. 
+                    Experto en transformar reglas de negocio complejas en sistemas eficientes.
+                </p>
+                
+                <div class="actions">
+        <a href="/portafolio/cv" class="pill-btn primary" target="_blank">Ver / Descargar CV ↓</a>
+        <a href="#contacto" class="btn secondary">Hablemos</a>
+    </div>
+
+    <div class="social-pills">
+        <a href="https://github.com/manuuafg" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://wa.me/584125514031" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/manuu.afg" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://facebook.com/manuu.afg" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Proyectos con Impacto Real</h2>
+        <div class="grid">
+			<ProjectCard 
+                title="Sistema de Ajuste Cambiario (La Casa de los Granos)" 
+                description="Automatización de precios basada en la tasa oficial BCV. Incluye un CRUD completo para gestión de inventario en tiempo real."
+                tags={["PHP", "MySQL", "AJAX", "jQuery", "Bootstrap"]}
+                link="https://github.com/manuuafg/CDG"
+            />
+            
+            <ProjectCard 
+                title="Gestión de Proveedores (Importadora Pinchili)" 
+                description="Sistema logístico para la búsqueda y validación de proveedores chinos. Optimiza los tiempos de respuesta y reduce costos operativos."
+                tags={["PHP", "MySQL", "DataTables", "JavaScript"]}
+                link="https://github.com/manuuafg/PINCHILI"
+            />
+
+            <ProjectCard 
+                title="Control Biométrico y Nutricional (Comedor)" 
+                description="Software de seguimiento de salud para estudiantes. Controla asistencia y genera reportes trimestrales de evolución de peso/talla."
+                tags={["PHP", "MySQL", "JavaScript", "CSS"]}
+                link="https://github.com/manuuafg/COMEDOR"
+            />
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <h2>Contacto</h2>
+        <p>¿Tienes un proyecto en mente o buscas un desarrollador comprometido? Escríbeme.</p>
+        
+        <form action="https://formspree.io/f/mwvwedgz" method="POST" class="contact-form">
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="apellido" placeholder="Apellido" required />
+            </div>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </section>
+</Layout>
+
+<style>
+    /* Estilos del Hero y Foto */
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem 0;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid var(--accent);
+        object-fit: cover;
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    }
+    
+    /* Adaptabilidad para móviles */
+    @media (max-width: 768px) {
+        .hero-content { flex-direction: column; text-align: center; }
+        .form-group { flex-direction: column; }
+    }
+
+    /* Estilos del Formulario */
+    .contact-section { margin-top: 5rem; padding-bottom: 5rem; }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+    .form-group { display: flex; gap: 1rem; }
+    input, textarea {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        padding: 1rem;
+        color: white;
+        font-family: inherit;
+    }
+    input:focus, textarea:focus { border-color: var(--accent); outline: none; }
+    
+    /* Botones y efectos */
+    .actions { display: flex; gap: 1rem; margin-top: 2rem; }
+    .btn { cursor: pointer; transition: 0.3s; }
+    .btn:hover { transform: scale(1.05); }
+    .highlight { color: var(--accent); }
+
+	/* Estilos del Botón de Envío */
+    button[type="submit"].btn {
+        background: linear-gradient(135deg, var(--accent) 0%, #0ea5e9 100%);
+        color: #0f172a; /* Texto oscuro para contrastar con el azul claro */
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+        margin-top: 1rem;
+    }
+
+    button[type="submit"].btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+        filter: brightness(1.1);
+    }
+
+    button[type="submit"].btn:active {
+        transform: translateY(-1px);
+    }
+
+    /* Estilos del Formulario (Asegurando consistencia) */
+    .contact-form input, .contact-form textarea {
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+    }
+
+	/* Contenedor de Redes Sociales */
+    .social-pills {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        justify-content: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        .social-pills { justify-content: center; }
+    }
+
+    .social-pills a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid #334155;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        background: rgba(30, 41, 59, 0.5);
+    }
+
+    .social-pills a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
+        background: rgba(56, 189, 248, 0.05);
+    }
+
+    /* Estilo para el botón secundario que ya tenías */
+    .btn.secondary {
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+    }
+</style>

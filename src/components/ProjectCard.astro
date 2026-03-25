@@ -1,0 +1,25 @@
+---
+const { title, description, tags, link } = Astro.props;
+---
+<div class="card">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="tags">
+        {tags.map((tag) => <span>{tag}</span>)}
+    </div>
+    <a href={link} target="_blank">Ver Proyecto →</a>
+</div>
+
+<style>
+    .card {
+        border: 1px solid #1e293b;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .tags { display: flex; gap: 0.5rem; margin: 1rem 0; }
+    span { background: #1e293b; padding: 0.2rem 0.6rem; font-size: 0.8rem; border-radius: 4px; }
+    a { color: var(--accent); text-decoration: none; font-weight: bold; }
+</style>

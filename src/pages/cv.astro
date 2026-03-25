@@ -1,0 +1,231 @@
+---
+// src/pages/cv.astro
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Manuel Ferraz | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="no-print floating-nav">
+        <a href="/" class="nav-btn">← Volver al Portafolio</a>
+        <button onclick="window.print()" class="nav-btn primary">🖨️ Imprimir / Guardar PDF</button>
+    </nav>
+
+    <div class="cv-container">
+        <aside class="sidebar">
+            <img src="/portafolio/mi-foto.jpg" alt="Manuel Ferraz" class="profile-pic">
+            
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +58 412-5514031</p>
+                <p><i class="fas fa-envelope"></i> alejandroofg@gmail.com</p>
+                <p><i class="fas fa-globe"></i> manuuafg.github.io</p>
+                <p><i class="fab fa-github"></i> github.com/manuuafg</p>
+                <p><i class="fas fa-map-marker-alt"></i> Barquisimeto, Venezuela</p>
+                <p><i class="fas fa-map-marker-alt"></i> La Serena, Chile</p>
+            </div>
+
+            <h2>Idiomas</h2>
+            <p style="font-size: 0.85rem;"><strong>Inglés:</strong> Nivel Intermedio (B1). Capacidad para entablar conversaciones técnicas y comprensión fluida de documentación.</p>
+
+            <h2>Stack Técnico</h2>
+            <ul class="skills-list">
+                <li>PHP (LAMP Stack)</li>
+                <li>MySQL / Bases de Datos</li>
+                <li>JavaScript (ES6+) / AJAX</li>
+                <li>jQuery / DataTables</li>
+                <li>Astro / HTML5 / CSS3</li>
+                <li>Bootstrap / Tailwind</li>
+                <li>Soporte Técnico & Redes</li>
+                <li>Git / GitHub</li>
+            </ul>
+
+            <h2>Educación</h2>
+            <div class="sidebar-section">
+                <h3>Educación Superior</h3>
+                <p><strong>TSU en Informática</strong><br>IUJO - Inst. Univ. Jesús Obrero<br><em>Nov 2022 - Dic 2025</em></p>
+            </div>
+            <div class="sidebar-section">
+                <h3>Educación Básica</h3>
+                <p><strong>Bachiller en Ciencias</strong><br>E.U. Colegio Ntra. Sra. de La Concordia<br><em>2010 - 2022</em></p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Manuel Ferraz</h1>
+                <p class="subtitle">Desarrollador Full Stack | TSU en Informática</p>
+                <p style="font-size: 0.9rem;">
+                    Profesional de la tecnología especializado en el desarrollo de sistemas empresariales. Experiencia demostrable en la creación de soluciones a medida, automatización financiera y soporte técnico integral de infraestructura.
+                </p>
+            </header>
+
+            <h2 class="section-title">Experiencia Profesional</h2>
+
+            <div class="experience-item">
+                <h3>Desarrollador Full Stack & Soporte Técnico</h3>
+                <div class="job-meta">
+                    <span class="company">Importadora Pinchili (China)</span>
+                    <span class="date">Junio 2025 - Actualidad</span>
+                </div>
+                <ul>
+                    <li>Realización de <strong>Pasantías Profesionales</strong> (Sept - Nov 2025).</li>
+                    <li>Desarrollo de plataforma logística para la validación de proveedores internacionales, optimizando tiempos de búsqueda en un 40%.</li>
+                    <li>Soporte técnico preventivo y correctivo de hardware/software para asegurar la operatividad de la infraestructura.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Desarrollador Backend (Proyecto 4 meses)</h3>
+                <div class="job-meta">
+                    <span class="company">La Casa de los Granos</span>
+                    <span class="date">Sep 2023 - Dic 2023</span>
+                </div>
+                <ul>
+                    <li>Automatización de precios mediante integración con la <strong>Tasa oficial del BCV</strong>.</li>
+                    <li>Implementación de paneles CRUD dinámicos para control de inventarios, mitigando errores humanos de facturación.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Desarrollador de Software</h3>
+                <div class="job-meta">
+                    <span class="company">Comedor Social Estudiantil</span>
+                    <span class="date">Proyecto Comunitario / Académico</span>
+                </div>
+                <ul>
+                    <li>Arquitectura de software para seguimiento biométrico (Peso/Talla) y control de asistencia estudiantil.</li>
+                    <li>Desarrollo de módulos de reportes para análisis de evolución nutricional.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Habilidades Clave</h2>
+            <p style="font-size: 0.88rem;">
+                Enfoque proactivo en la resolución de problemas, mantenimiento de sistemas legados, optimización de queries SQL y despliegue de interfaces modernas con enfoque en la experiencia de usuario (UX).
+            </p>
+        </main>
+    </div>
+</body>
+</html>
+
+<style>
+    :root {
+        --primary: #0f172a;
+        --accent: #0ea5e9;
+        --text: #334155;
+        --light-bg: #f8fafc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text);
+        line-height: 1.4;
+    }
+
+    /* Navegación flotante */
+    .floating-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 20px;
+        background: white;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-btn {
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        background: #f1f5f9;
+        color: var(--primary);
+        border: 1px solid #e2e8f0;
+        cursor: pointer;
+    }
+
+    .nav-btn.primary {
+        background: var(--accent);
+        color: white;
+        border: none;
+    }
+
+    /* Estructura CV */
+    .cv-container {
+        max-width: 950px;
+        margin: 20px auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 32% 68%;
+        min-height: 1120px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .sidebar {
+        background-color: var(--primary);
+        color: white;
+        padding: 30px 20px;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 3px solid var(--accent);
+        margin: 0 auto 20px;
+        display: block;
+        object-fit: cover;
+    }
+
+    .sidebar h2 { color: var(--accent); font-size: 1.1rem; margin: 25px 0 10px; text-transform: uppercase; border-bottom: 1px solid #334155; }
+    .contact-info p { font-size: 0.8rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .contact-info i { color: var(--accent); width: 15px; }
+
+    .sidebar-section { margin-bottom: 20px; }
+    .sidebar-section h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 5px; }
+    .sidebar-section p { font-size: 0.75rem; margin-bottom: 5px; line-height: 1.3; }
+
+    .skills-list { list-style: none; font-size: 0.8rem; }
+    .skills-list li { margin-bottom: 4px; padding-left: 8px; border-left: 2px solid var(--accent); }
+
+    .main-content { padding: 40px; }
+    header h1 { font-size: 2.2rem; color: var(--primary); }
+    header .subtitle { font-size: 1.1rem; color: var(--accent); font-weight: bold; margin-bottom: 15px; }
+
+    .section-title {
+        font-size: 1.2rem;
+        color: var(--primary);
+        border-bottom: 2px solid var(--accent);
+        display: inline-block;
+        margin: 20px 0 12px;
+        text-transform: uppercase;
+    }
+
+    .experience-item { margin-bottom: 18px; }
+    .experience-item h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 2px; }
+    .job-meta { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px; }
+    .company { font-weight: bold; color: var(--accent); }
+    .date { font-style: italic; color: #64748b; }
+    
+    .experience-item ul { margin-left: 18px; font-size: 0.88rem; }
+    .experience-item li { margin-bottom: 3px; }
+
+    @media print {
+        .no-print { display: none; }
+        body { background: white; }
+        .cv-container { 
+            margin: 0; 
+            width: 100%; 
+            max-width: 100%;
+            box-shadow: none;
+        }
+    }
+</style>
