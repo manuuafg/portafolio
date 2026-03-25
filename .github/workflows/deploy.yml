@@ -1,11 +1,4 @@
- Check failure on line 1 in .github/workflows/deploy.yml
-
-
-GitHub Actions
-/ .github/workflows/deploy.yml
-Invalid workflow file
-
-(Line: 20, Col: 14): Unexpected value ''
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -25,5 +18,5 @@ jobs:
       - name: Install, build, and upload
         uses: withastro/action@v3
         with:
-          # path: . # Si tu proyecto está en la raíz del repo
-          # node-version: 20 # Opcional
+          path: .
+          node-version: 20
