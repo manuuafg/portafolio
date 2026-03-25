@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://manuuafg.github.io', // Tu URL de GitHub Pages
-  base: '/portafolio/', // Si tu repo se llama exactamente manuuafg.github.io, usa '/'
+  site: 'https://manuuafg.github.io',
+  base: '/portafolio',
+  outDir: 'dist', // Forzamos que la salida sea esta carpeta
 });
