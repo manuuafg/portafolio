@@ -79,7 +79,7 @@ import ProjectCard from '../components/ProjectCard.astro';
             </div>
             <input type="email" name="email" placeholder="Tu correo electrónico" required />
             <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-            <button type="submit" class="btn">Enviar Mensaje</button>
+            <button type="submit" class="submit-btn">Enviar Mensaje</button>
         </form>
     </section>
 </Layout>
@@ -187,31 +187,32 @@ import ProjectCard from '../components/ProjectCard.astro';
     .highlight { color: var(--accent); }
 
 	/* Estilos del Botón de Envío */
-    button[type="submit"].btn {
-        background: linear-gradient(135deg, var(--accent) 0%, #0ea5e9 100%);
-        color: #0f172a; /* Texto oscuro para contrastar con el azul claro */
-        border: none;
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
-        margin-top: 1rem;
-    }
+  .submit-btn {
+    background: linear-gradient(135deg, var(--accent) 0%, #0ea5e9 100%);
+    color: #0f172a; 
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+    margin-top: 1rem;
+    width: fit-content; /* Para que no ocupe todo el ancho si no quieres */
+}
 
-    button[type="submit"].btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
-        filter: brightness(1.1);
-    }
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+    filter: brightness(1.1);
+}
 
-    button[type="submit"].btn:active {
-        transform: translateY(-1px);
-    }
+.submit-btn:active {
+    transform: translateY(-1px);
+}
 
     /* Estilos del Formulario (Asegurando consistencia) */
     .contact-form input, .contact-form textarea {
