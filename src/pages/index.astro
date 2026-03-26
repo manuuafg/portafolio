@@ -223,13 +223,13 @@ import ProjectCard from '../components/ProjectCard.astro';
         overflow-x: hidden;
     }
 
-    /* 2. Grid de Proyectos Responsivo */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
+/* 2. Grid de Proyectos Responsivo */
+.grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;              
+    margin-top: 2rem;
+}
 
     /* 3. Media Query Principal (Para tablets y celulares) */
     @media (max-width: 768px) {
